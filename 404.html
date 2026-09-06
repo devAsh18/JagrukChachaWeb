@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-lang="en" class="no-js">
+<head>
+    <script>document.documentElement.classList.remove('no-js');</script>
+    <noscript><style>.animate-on-scroll { opacity: 1 !important; transform: none !important; }</style></noscript>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Blocking script prevents theme/lang flash on first paint -->
+    <script>
+        (function() {
+            var t = localStorage.getItem('theme') || 'dark';
+            var l = localStorage.getItem('lang') || 'en';
+            document.documentElement.setAttribute('data-theme', t);
+            document.documentElement.setAttribute('data-lang', l);
+            document.documentElement.lang = l;
+        })();
+    </script>
+
+    <!-- SEO -->
+    <title>404 — Page Not Found | Jagruk Chacha</title>
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="The page you're looking for doesn't exist.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://jagrukchacha.com/">
+
+    <!-- Favicon + Apple touch icon -->
+    <link rel="icon" type="image/png" href="assets/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+    <!-- PWA manifest -->
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Theme-color for mobile browser chrome -->
+    <meta name="theme-color" content="#800010" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+
+    <!-- 404 Page Mobile Nav Styles -->
+    <style>
+        @media(max-width:768px){
+            .nav{padding:0}
+            .nav-container{position:relative;padding:0;display:flex;flex-direction:column;gap:0}
+            .nav-logo{display:none}
+            .desktop-toggles{display:none!important}
+            .nav-mobile-header{display:flex!important;justify-content:space-between;align-items:center;gap:15px;padding:12px 16px;background:var(--bg-primary);border-bottom:1px solid var(--border-color)}
+            .nav-mobile-toggles{display:flex;align-items:center;gap:8px;flex-shrink:0}
+            .nav-links{display:flex!important;flex-wrap:nowrap!important;gap:8px;padding:8px 0 8px 10px;background:var(--bg-secondary);border-top:1px solid var(--border-color);justify-content:flex-start;align-items:center;overflow-x:auto;width:100%}
+            .not-found-page{padding-top:180px;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center}
+        }
+        @media(max-width:480px){
+            .nav-mobile-header{padding:10px 12px}
+            .nav-mobile-toggles{gap:6px}
+            .not-found-page{padding-top:160px}
+        }
+    </style>
+
+    <!-- Open Graph — essential so shared 404 links get a rich preview -->
+    <meta property="og:title" content="404 — Page Not Found | Jagruk Chacha">
+    <meta property="og:description" content="This page seems to have vanished — like money disappearing at a petrol pump.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jagrukchacha.com/404.html">
+    <meta property="og:image" content="https://jagrukchacha.com/assets/JC_CoverPhoto.webp">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:locale:alternate" content="hi_IN">
+    <meta property="og:site_name" content="Jagruk Chacha">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="404 — Page Not Found | Jagruk Chacha">
+    <meta name="twitter:description" content="This page seems to have vanished — like money disappearing at a petrol pump.">
+    <meta name="twitter:image" content="https://jagrukchacha.com/assets/JC_CoverPhoto.webp">
+
+    <!-- Fonts — only weights 400/600/700 that the design uses -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Plausible Analytics (privacy-friendly, no cookies) -->
+    <script defer data-domain="jagrukchacha.com" src="https://plausible.io/js/script.js"></script>
+
+    <!-- Non-critical styles — deferred so they don't block first paint -->
+    <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main" class="skip-link">Skip to main content / मुख्य सामग्री पर जाएं</a>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <!-- Mobile-only: Logo + Toggles row (first on mobile) -->
+            <div class="nav-mobile-header">
+                <a href="index.html" class="nav-mobile-logo" aria-label="Jagruk Chacha home">
+                    <span class="nav-logo-text">Jagruk Chacha</span>
+                </a>
+                <div class="nav-mobile-toggles">
+                    <div class="toggle-container">
+                        <svg class="toggle-icon light-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+                        </svg>
+                        <label class="toggle-switch theme-toggle" aria-label="Toggle theme">
+                            <input type="checkbox" id="themeToggleInputMobile">
+                            <span class="toggle-slider"></span>
+                        </label>
+                        <svg class="toggle-icon dark-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
+                        </svg>
+                    </div>
+                    <div class="toggle-container">
+                        <span class="toggle-label en-label">EN</span>
+                        <label class="toggle-switch" aria-label="Toggle language">
+                            <input type="checkbox" id="langToggleMobile">
+                            <span class="toggle-slider"></span>
+                        </label>
+                        <span class="toggle-label hi-label">HI</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nav links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a lang="en" href="index.html" class="en">Home</a><a lang="hi" href="index.html" class="hi">होम</a></li>
+                <li><a lang="en" href="index.html#about" class="en">About</a><a lang="hi" href="index.html#about" class="hi">हमारे बारे में</a></li>
+                <li><a lang="en" href="index.html#episodes" class="en">Episodes</a><a lang="hi" href="index.html#episodes" class="hi">एपिसोड</a></li>
+                <li><a lang="en" href="index.html#collab" class="en">Contact</a><a lang="hi" href="index.html#collab" class="hi">संपर्क</a></li>
+                <li class="nav-cta-item en"><a lang="en" href="index.html#social" class="en nav-cta">Social</a></li>
+                <li class="nav-cta-item hi"><a lang="hi" href="index.html#social" class="hi nav-cta">सोशल</a></li>
+            </ul>
+
+            <!-- Desktop-only: Logo + Toggles -->
+            <a href="index.html" class="nav-logo" aria-label="Jagruk Chacha home">
+                <div class="nav-logo-icon">
+                    <img src="assets/JC_ProfilePic.webp" alt="Jagruk Chacha" width="44" height="44">
+                </div>
+                <span class="nav-logo-text">Jagruk Chacha</span>
+            </a>
+
+            <!-- Actions: toggles (desktop) -->
+            <div class="nav-actions desktop-toggles">
+                <div class="toggle-container">
+                    <svg class="toggle-icon light-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+                    </svg>
+                    <label class="toggle-switch theme-toggle" aria-label="Toggle theme">
+                        <input type="checkbox" id="themeToggleInput">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <svg class="toggle-icon dark-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
+                    </svg>
+                </div>
+                <div class="toggle-container">
+                    <span class="toggle-label en-label">EN</span>
+                    <label class="toggle-switch" aria-label="Toggle language">
+                        <input type="checkbox" id="langToggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <span class="toggle-label hi-label">HI</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 404 Content -->
+    <main id="main" tabindex="-1" class="not-found-page">
+        <div style="max-width: 520px;">
+            <div style="font-size: 6rem; font-weight: 800; line-height: 1; margin-bottom: 24px;">
+                <span style="background: linear-gradient(135deg, #800010, #B02232); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">₹</span>
+                <span style="font-size: 3rem; color: var(--text-tertiary); display: block; margin-top: 8px;">404</span>
+            </div>
+
+            <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 16px; color: var(--text-primary);">
+                <span class="en">Page Not Found</span>
+                <span class="hi">पेज नहीं मिला</span>
+            </h1>
+
+            <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.7;">
+                <span class="en">This page seems to have vanished — like money disappearing at a petrol pump.</span>
+                <span class="hi">यह पेज गायब हो गया है — जैसे पेट्रोल पंप पर पैसा।</span>
+            </p>
+
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="index.html" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                    <span class="en">Go Home</span>
+                    <span class="hi">होम पर जाएं</span>
+                </a>
+                <a href="index.html#collab" class="btn btn-secondary">
+                    <span class="en">Contact Us</span>
+                    <span class="hi">संपर्क करें</span>
+                </a>
+            </div>
+
+            <p style="font-size: 0.875rem; color: var(--text-tertiary); margin-top: 48px;">
+                <span class="en">Jagruk Raho! 💰</span>
+                <span class="hi">जागरूक रहो! 💰</span>
+            </p>
+        </div>
+    </main>
+</body>
+</html>

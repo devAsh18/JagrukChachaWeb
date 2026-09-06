@@ -1,0 +1,31 @@
+{
+  "name": "Jagruk Chacha — हर रुपये के पीछे एक कहानी",
+  "short_name": "Jagruk Chacha",
+  "description": "Hindi-first short-form content revealing the hidden economics behind everyday Indian life.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#800010",
+  "lang": "en-IN",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "assets/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/JC_ProfilePic.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any"
+    }
+  ]
+}

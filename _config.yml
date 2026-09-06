@@ -1,0 +1,49 @@
+# Jekyll configuration for jagrukchacha.com (GitHub Pages)
+# These settings are used when building with Jekyll on GitHub Pages.
+
+title: Jagruk Chacha
+description: "Every Rupee Has a Story. Hindi-first short-form content revealing the hidden economics behind everyday Indian life."
+url: "https://jagrukchacha.com"
+lang: en
+
+# GitHub Pages metadata
+github:
+  owner_name: JagrukChacha
+  repo_name: jagrukchacha
+
+# Build settings
+markdown: kramdown
+theme: null          # Using plain CSS, no Jekyll theme
+plugins: []
+
+# Exclude unnecessary files from the build
+exclude:
+  - ".DS_Store"
+  - "Thumbs.db"
+  - "*.psd"
+  - "*.sketch"
+  - CLAUDE.md
+  - README.md
+  - _config.yml     # Already excluded by default, but explicit for clarity
+
+# GitHub Pages uses Kramdown for Markdown — these settings ensure
+# clean, semantic HTML output without adding unwanted wrappers.
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
+
+# ----- IMPORTANT: Enable GitHub Pages HTTPS -----
+# GitHub Pages automatically serves all custom domains over HTTPS
+# once HTTPS is enforced in your repository settings.
+# Go to: Repository Settings → Pages → Enforce HTTPS
+
+# ----- Performance notes -----
+# GitHub Pages automatically:
+#   - Serves assets over HTTP/2
+#   - Applies gzip/brotli compression
+#   - Caches static assets (CSS, JS, images) aggressively
+#   - Uses a CDN (Fastly/Cloudflare) in front of the site
+#
+# Custom Cache-Control / Security headers are NOT supported on GitHub Pages.
+# If you want them, add Cloudflare (free plan) as a proxy in front of
+# your github.io domain and configure page rules there.
