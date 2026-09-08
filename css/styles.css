@@ -90,7 +90,7 @@
             margin: 0 auto;
             padding: 0 32px;
             display: flex;
-            justify-content: space-between;
+            gap: 8px;
             align-items: center;
             overflow: visible;
             gap: 24px;
@@ -494,7 +494,7 @@
             font-size: 0.75rem;
             font-weight: 600;
             border-radius: 100px;
-            margin-bottom: 12px;
+            margin-right: auto; margin-bottom: 0;
         }
 
         .hero-card-title {
@@ -734,7 +734,7 @@
             font-size: 2.5rem;
             font-weight: 800;
             letter-spacing: -0.02em;
-            margin-bottom: 12px;
+            margin-right: auto; margin-bottom: 0;
         }
 
         .section-subtitle {
@@ -849,7 +849,7 @@
             font-size: 0.75rem;
             font-weight: 600;
             border-radius: 100px;
-            margin-bottom: 12px;
+            margin-right: auto; margin-bottom: 0;
         }
 
         .episode-title {
@@ -867,7 +867,7 @@
 
         .episode-meta {
             display: flex;
-            justify-content: space-between;
+            gap: 8px;
             align-items: center;
             padding-top: 16px;
             border-top: 1px solid var(--border-color);
@@ -896,8 +896,8 @@
         .episode-top {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            margin-bottom: 12px;
+            gap: 8px;
+            margin-right: auto; margin-bottom: 0;
         }
 
         .episode-duration {
@@ -935,7 +935,7 @@
         .episode-hashtags {
             font-size: 0.75rem;
             color: var(--text-tertiary);
-            margin-bottom: 12px;
+            margin-right: auto; margin-bottom: 0;
             line-height: 1.6;
             letter-spacing: -0.01em;
         }
@@ -1473,7 +1473,7 @@
         }
 
         .footer-links li {
-            margin-bottom: 12px;
+            margin-right: auto; margin-bottom: 0;
         }
 
         .footer-links a {
@@ -1491,7 +1491,7 @@
             padding-top: 30px;
             border-top: 1px solid var(--border-color);
             display: flex;
-            justify-content: space-between;
+            gap: 8px;
             align-items: center;
             flex-wrap: wrap;
             gap: 16px;
@@ -1784,7 +1784,7 @@
             /* Mobile-only header: Logo + Toggles on same row */
             .nav-mobile-header {
                 display: flex !important;
-                justify-content: space-between;
+                gap: 8px;
                 align-items: center;
                 gap: 15px;
                 padding: 12px 16px;
@@ -1981,7 +1981,7 @@
         .nav-mobile-row {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            gap: 8px;
             gap: 12px;
             padding: 8px 12px;
             background: var(--bg-tertiary);
@@ -2300,7 +2300,7 @@
         .faq-question {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            gap: 8px;
             gap: 16px;
             padding: 20px 24px;
             font-size: 1rem;
@@ -2506,7 +2506,7 @@
         .video-modal-header {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            gap: 8px;
             padding: 16px 20px;
             border-bottom: 1px solid var(--border-color);
         }
