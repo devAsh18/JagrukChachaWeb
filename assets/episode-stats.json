@@ -1,7 +1,15 @@
 {
   "_comment": "Jagruk Chacha — Episode statistics. Update weekly or via GitHub Actions cron (YouTube Data API). Fetched by main.js with 24h localStorage cache.",
-  "lastUpdated": "2026-09-12T00:00:00Z",
+  "lastUpdated": "2026-09-18T00:00:00Z",
   "episodes": {
+    "e04": {
+      "videoId": "pML6VN7OIEA",
+      "platforms": {
+        "youtube": { "views": 0, "link": "https://youtube.com/shorts/pML6VN7OIEA" },
+        "instagram": { "views": 0, "link": "https://www.instagram.com/reel/DdbgF-HzV3C/" },
+        "facebook": { "views": 0, "link": "https://www.facebook.com/share/r/1Semqta54A/" }
+      }
+    },
     "e01": {
       "videoId": "43lMkjWerr8",
       "platforms": {
