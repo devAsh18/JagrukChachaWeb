@@ -339,7 +339,7 @@
     const videoModalBackdrop = document.getElementById('videoModalBackdrop');
     const videoModalIframe = document.getElementById('videoModalIframe');
     const VIDEO_EMBED_BASE = 'https://www.youtube.com/embed/';
-    const VIDEO_ID = 'F58WUJiMDfw';
+    const VIDEO_ID = 's054hppNqQw';
     let lastFocused = null;
     // Selectors for focusable elements inside the modal — used by the focus trap
     // so keyboard users (WCAG 2.1.2) can't Tab out into the page behind the modal.
