@@ -11,6 +11,8 @@
             document.documentElement.setAttribute('data-theme', t);
             document.documentElement.setAttribute('data-lang', l);
             document.documentElement.lang = l;
+            // Flip no-js -> js so the CSS fallbacks stop winning over the real UI
+            document.documentElement.classList.remove('no-js');
         })();
     </script>
 
@@ -26,7 +28,7 @@
     <meta property="og:description:hi" content="जागरूक चाचा से संपर्क करें — ब्रांड पार्टनरशिप, स्पॉन्सरशिप, या बस नमस्ते।">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jagrukchacha.com/contact.html">
-    <meta property="og:image" content="https://jagrukchacha.com/assets/JC_CoverPhoto.webp">
+    <meta property="og:image" content="https://jagrukchacha.com/assets/og-image.jpg">
     <meta property="og:locale" content="en_IN">
     <meta property="og:locale:alternate" content="hi_IN">
     <meta property="og:site_name" content="Jagruk Chacha">
@@ -35,7 +37,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact Us | Jagruk Chacha">
     <meta name="twitter:description" content="Get in touch with Jagruk Chacha.">
-    <meta name="twitter:image" content="https://jagrukchacha.com/assets/JC_CoverPhoto.webp">
+    <meta name="twitter:image" content="https://jagrukchacha.com/assets/og-image.jpg">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://jagrukchacha.com/contact.html">
@@ -106,8 +108,8 @@
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
     </style>
 
-    <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+    <link rel="stylesheet" href="css/styles.css?v=12" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/styles.css?v=12"></noscript>
     <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -218,7 +220,7 @@
                             <span lang="en" class="en">Send a Message</span>
                             <span lang="hi" class="hi">संदेश भेजें</span>
                         </h2>
-                        <form class="contact-form" id="contactForm">
+                        <form class="contact-form" id="contactForm" action="mailto:jagrukchacha@gmail.com" method="post" enctype="text/plain">
                             <div class="form-group">
                                 <label class="form-label" for="name">
                                     <span lang="en" class="en">Your Name *</span>
@@ -265,6 +267,13 @@
                                 <span lang="en" class="en">📧 Your email app opens with the message ready to send</span>
                                 <span lang="hi" class="hi">📧 आपका ईमेल ऐप खुलेगा — संदेश तैयार होगा</span>
                             </p>
+                            <noscript>
+                                <p class="form-note">
+                                    JavaScript is off, so this form can't compose the message for you.
+                                    Email us directly at
+                                    <a href="mailto:jagrukchacha@gmail.com?subject=New%20Contact%20from%20Website">jagrukchacha@gmail.com</a>.
+                                </p>
+                            </noscript>
                         </form>
                     </div>
 

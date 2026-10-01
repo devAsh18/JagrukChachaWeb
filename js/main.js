@@ -1,5 +1,5 @@
 // Jagruk Chacha — shared site behavior
-// Handles: theme toggle, language toggle, mobile menu, scroll animations, smooth scroll, contact form, active nav highlighting
+// Handles: theme toggle, language toggle, scroll animations, smooth scroll, contact form, active nav highlighting, episode view counts
 
 (function () {
     'use strict';
@@ -143,6 +143,8 @@
         const isHindi = newLang === 'hi';
         if (langToggle) langToggle.checked = isHindi;
         if (langToggleMobile) langToggleMobile.checked = isHindi;
+        // View-count suffixes are localised — refresh them too
+        if (typeof applyEpisodeStats === 'function') applyEpisodeStats();
     }
 
     if (langToggle) {
@@ -155,34 +157,6 @@
         langToggleMobile.addEventListener('change', (e) => {
             const newLang = e.target.checked ? 'hi' : 'en';
             setLang(newLang);
-        });
-    }
-
-    // ---------- Mobile menu ----------
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const navLinks = document.getElementById('navLinks');
-    if (mobileMenuBtn && navLinks) {
-        function closeMenu() {
-            navLinks.classList.remove('active');
-            mobileMenuBtn.setAttribute('aria-expanded', 'false');
-            mobileMenuBtn.focus();
-        }
-        function openMenu() {
-            navLinks.classList.add('active');
-            mobileMenuBtn.setAttribute('aria-expanded', 'true');
-        }
-        mobileMenuBtn.addEventListener('click', () => {
-            const isOpen = navLinks.classList.contains('active');
-            if (isOpen) closeMenu(); else openMenu();
-        });
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-        // Close on ESC
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
-                closeMenu();
-            }
         });
     }
 
@@ -257,11 +231,11 @@
     });
 
     // ---------- Episode view counts from static JSON ----------
-    // Fetches episode-stats.json with a 24h localStorage cache.
-    // Update episode-stats.json manually or via a GitHub Actions cron job.
+    // Fetches episode-stats.json. No localStorage cache on purpose: the Pages CDN
+    // already serves this file with a far-freshness ETag, and a client-side cache
+    // only served stale counts for a day after the file was updated.
     const STATS_URL = 'assets/episode-stats.json';
-    const CACHE_KEY  = 'jc_episode_stats';
-    const CACHE_TTL  = 24 * 60 * 60 * 1000; // 24 hours in ms
+    let episodeStats = null;
 
     function formatViews(n) {
         return n >= 1000
@@ -273,47 +247,42 @@
         return html.getAttribute('data-lang') || 'en';
     }
 
+    // Re-applied on language switch so the "views"/"व्यूज़" suffix follows the UI.
+    function applyEpisodeStats() {
+        const lang = getLang();
+        document.querySelectorAll('[data-episode][data-stat]').forEach(badge => {
+            const count = badge.querySelector('.episode-views-count');
+            if (!count) return;
+
+            const ep = episodeStats?.episodes?.[badge.dataset.episode];
+            const value = ep?.platforms?.youtube?.[badge.dataset.stat] ?? ep?.[badge.dataset.stat];
+
+            // Unknown or not-yet-published counts hide the badge. Printing "0 views"
+            // on a channel with published episodes reads as broken, not as accurate.
+            if (!Number.isFinite(value) || value <= 0) {
+                badge.hidden = true;
+                return;
+            }
+            badge.hidden = false;
+            count.textContent = formatViews(value) + (lang === 'hi' ? ' व्यूज़' : ' views');
+        });
+    }
+
     async function loadEpisodeStats() {
         const badges = document.querySelectorAll('[data-episode][data-stat]');
         if (!badges.length) return;
 
-        let stats = null;
-
         try {
-            const cached = localStorage.getItem(CACHE_KEY);
-            if (cached) {
-                const { data, ts } = JSON.parse(cached);
-                if (Date.now() - ts < CACHE_TTL) {
-                    stats = data;
-                }
-            }
-
-            if (!stats) {
-                const res = await fetch(STATS_URL);
-                if (!res.ok) throw new Error('Failed to fetch stats');
-                stats = await res.json();
-                localStorage.setItem(CACHE_KEY, JSON.stringify({ data: stats, ts: Date.now() }));
-            }
+            const res = await fetch(STATS_URL);
+            if (!res.ok) throw new Error('Failed to fetch stats');
+            episodeStats = await res.json();
         } catch (_) {
-            // Network/server error — keep placeholder text already in HTML
+            // Network/server error — drop the badges rather than show stale zeroes
+            badges.forEach(badge => { badge.hidden = true; });
             return;
         }
 
-        const lang = getLang();
-
-        badges.forEach(badge => {
-            const epId  = badge.dataset.episode;
-            const stat  = badge.dataset.stat;
-            const count = badge.querySelector('.episode-views-count');
-            if (!count) return;
-
-            const ep = stats?.episodes?.[epId];
-            const value = ep?.platforms?.youtube?.[stat] ?? ep?.[stat];
-            if (value) {
-                const suffix = lang === 'hi' ? ' व्यूज़' : ' views';
-                count.textContent = formatViews(value) + suffix;
-            }
-        });
+        applyEpisodeStats();
     }
 
     loadEpisodeStats();

@@ -11,6 +11,8 @@
             document.documentElement.setAttribute('data-theme', t);
             document.documentElement.setAttribute('data-lang', l);
             document.documentElement.lang = l;
+            // Flip no-js -> js so the CSS fallbacks stop winning over the real UI
+            document.documentElement.classList.remove('no-js');
         })();
     </script>
     <style>.no-js .animate-on-scroll { opacity: 1 !important; transform: none !important; }</style>
@@ -28,7 +30,7 @@
     <meta property="og:description" content="Watch all episodes of Jagruk Chacha. Every Rupee Has a Story — discover the hidden economics behind everyday Indian life.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jagrukchacha.com/episodes.html">
-    <meta property="og:image" content="https://jagrukchacha.com/assets/JC_CoverPhoto.webp">
+    <meta property="og:image" content="https://jagrukchacha.com/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="en_IN">
@@ -42,7 +44,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Episodes | Jagruk Chacha">
     <meta name="twitter:description" content="Watch all episodes of Jagruk Chacha.">
-    <meta name="twitter:image" content="https://jagrukchacha.com/assets/JC_CoverPhoto.webp">
+    <meta name="twitter:image" content="https://jagrukchacha.com/assets/og-image.jpg">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://jagrukchacha.com/episodes.html">
@@ -128,9 +130,204 @@
     </style>
 
     <!-- Non-critical styles — deferred so they don't block first paint -->
-    <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+    <link rel="stylesheet" href="css/styles.css?v=12" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/styles.css?v=12"></noscript>
     <script src="js/main.js" defer></script>
+
+    <!-- Structured data: the episode catalogue -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Jagruk Chacha — All Episodes",
+  "itemListOrder": "https://schema.org/ItemListOrderDescending",
+  "numberOfItems": 7,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "VideoObject",
+        "name": "बीस की गोलगप्पे... पांच की लागत!",
+        "description": "₹20 plate of golgappes costs ₹5-6 to make, but restaurants sell them for ₹500. Street vendor earnings: small town ₹600, big city ₹1,100, metro hub ₹3,000/day.",
+        "thumbnailUrl": [
+          "https://jagrukchacha.com/assets/episodes/E07/E07-Thumbnail-1536.webp"
+        ],
+        "uploadDate": "2026-09-27",
+        "duration": "PT45S",
+        "contentUrl": "https://www.youtube.com/shorts/I7VTxhPZe6E",
+        "embedUrl": "https://www.youtube.com/embed/I7VTxhPZe6E",
+        "inLanguage": "hi",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Jagruk Chacha",
+          "url": "https://jagrukchacha.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://jagrukchacha.com/assets/JC_ProfilePic.webp"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "VideoObject",
+        "name": "बिजली बिल 0 — सोलर पैनल लगाने का हिसाब",
+        "description": "How your electricity bill becomes zero with PM Surya Ghar Yojana — ₹78,000 subsidy for a 3kW system + ₹17,000 Rajasthan bonus. The math behind free electricity.",
+        "thumbnailUrl": [
+          "https://jagrukchacha.com/assets/episodes/E06/E06-Thumbnail-1536.webp"
+        ],
+        "uploadDate": "2026-09-25",
+        "duration": "PT87S",
+        "contentUrl": "https://www.youtube.com/shorts/s054hppNqQw",
+        "embedUrl": "https://www.youtube.com/embed/s054hppNqQw",
+        "inLanguage": "hi",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Jagruk Chacha",
+          "url": "https://jagrukchacha.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://jagrukchacha.com/assets/JC_ProfilePic.webp"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "VideoObject",
+        "name": "सौ के ride में ड्राइवर की जेब में कितना बचता है?",
+        "description": "How much does a cab driver actually keep from a ₹100 ride? With the platform's commission now a daily subscription of ~₹67, drivers take home only about ₹40-50 per ride.",
+        "thumbnailUrl": [
+          "https://jagrukchacha.com/assets/episodes/E05/E05-Thumbnail-1536.webp"
+        ],
+        "uploadDate": "2026-09-23",
+        "duration": "PT47S",
+        "contentUrl": "https://www.youtube.com/shorts/F58WUJiMDfw",
+        "embedUrl": "https://www.youtube.com/embed/F58WUJiMDfw",
+        "inLanguage": "hi",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Jagruk Chacha",
+          "url": "https://jagrukchacha.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://jagrukchacha.com/assets/JC_ProfilePic.webp"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "VideoObject",
+        "name": "₹5000 का टिकट — एयरलाइन को कितना मिलता है?",
+        "description": "How much does an airline actually keep from a ₹5000 flight ticket? Base fare is roughly ₹3,600, but taxes, fuel, and airport charges make up the rest — only about ₹1,200 goes to the airline itself.",
+        "thumbnailUrl": [
+          "https://jagrukchacha.com/assets/episodes/E04/E04-Thumbnail-1536.webp"
+        ],
+        "uploadDate": "2026-09-18",
+        "duration": "PT47S",
+        "contentUrl": "https://www.youtube.com/shorts/pML6VN7OIEA",
+        "embedUrl": "https://www.youtube.com/embed/pML6VN7OIEA",
+        "inLanguage": "hi",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Jagruk Chacha",
+          "url": "https://jagrukchacha.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://jagrukchacha.com/assets/JC_ProfilePic.webp"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "VideoObject",
+        "name": "₹10 Chai — Chaiwala Earnings?",
+        "description": "How much does a chaiwala actually keep from a ₹10 cup of chai? Milk costs roughly ₹2, sugar ₹1, tea leaves ₹1, and gas plus the cup about ₹0.50 — a total cost of ~₹4.50, leaving ~₹5.50 per cup. But the real money is not in one cup — it is in the ~500 cups sold every day.",
+        "thumbnailUrl": [
+          "https://jagrukchacha.com/assets/episodes/E03/E03-Thumbnail-1536.webp"
+        ],
+        "uploadDate": "2026-09-12",
+        "duration": "PT47S",
+        "contentUrl": "https://www.youtube.com/shorts/peCfxJ1HdnI",
+        "embedUrl": "https://www.youtube.com/embed/peCfxJ1HdnI",
+        "inLanguage": "hi",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Jagruk Chacha",
+          "url": "https://jagrukchacha.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://jagrukchacha.com/assets/JC_ProfilePic.webp"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "VideoObject",
+        "name": "₹300 Ticket — Cinema Owner Earnings?",
+        "description": "How much does a cinema owner actually keep from a ₹300 ticket? Cinema halls share roughly 50% of net ticket revenue with the film distributor. But the real business is F&amp;B — popcorn and cold drinks with ~75% margin.",
+        "thumbnailUrl": [
+          "https://jagrukchacha.com/assets/episodes/E02/E02-Thumbnail-1536.webp"
+        ],
+        "uploadDate": "2026-09-08",
+        "duration": "PT45S",
+        "contentUrl": "https://www.youtube.com/shorts/Q6floi3cDLE",
+        "embedUrl": "https://www.youtube.com/embed/Q6floi3cDLE",
+        "inLanguage": "hi",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Jagruk Chacha",
+          "url": "https://jagrukchacha.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://jagrukchacha.com/assets/JC_ProfilePic.webp"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "VideoObject",
+        "name": "⛽ Petrol Pump Earning?",
+        "description": "How much does a Petrol Pump Owner actually earn on ₹100? With margins of roughly ₹1-2 per litre, petrol pumps survive on volume — a single pump serves hundreds of vehicles daily. But the real profits come from the shop: lubricants, snacks, chai, and the convenience premium.",
+        "thumbnailUrl": [
+          "https://jagrukchacha.com/assets/episodes/E01/E01-Thumbnail-1536.webp"
+        ],
+        "uploadDate": "2026-09-05",
+        "duration": "PT52S",
+        "contentUrl": "https://www.youtube.com/shorts/43lMkjWerr8",
+        "embedUrl": "https://www.youtube.com/embed/43lMkjWerr8",
+        "inLanguage": "hi",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Jagruk Chacha",
+          "url": "https://jagrukchacha.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://jagrukchacha.com/assets/JC_ProfilePic.webp"
+          }
+        }
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body>
     <!-- Skip to main content -->
@@ -221,10 +418,10 @@
             <div class="container">
                 <div class="section-header animate-on-scroll">
                     <span class="section-label"><span lang="en" class="en">Episodes</span><span lang="hi" class="hi">एपिसोड</span></span>
-                    <h2 class="section-title">
+                    <h1 class="section-title">
                         <span lang="en" class="en">All Episodes</span>
                         <span lang="hi" class="hi">सभी एपिसोड</span>
-                    </h2>
+                    </h1>
                     <p class="section-subtitle">
                         <span lang="en" class="en">Every episode tells a story. Every story brings insight.</span>
                         <span lang="hi" class="hi">हर एपिसोड में एक कहानी। हर कहानी में एक नई समझ।</span>
@@ -281,10 +478,10 @@
                 <div class="topic-teasers"><!-- Topic Teasers — hints for upcoming episodes -->
                     <div class="topic-teaser animate-on-scroll">
                         <div class="topic-teaser-icon" aria-hidden="true">🍕</div>
-                        <h4 class="topic-teaser-title">
+                        <h2 class="topic-teaser-title">
                             <span lang="en" class="en">Food: What the ₹20 golgappe plate really costs</span>
                             <span lang="hi" class="hi">खाना: ₹20 के गोलगप्पे की असली लागत</span>
-                        </h4>
+                        </h2>
                         <p class="topic-teaser-desc">
                             <span lang="en" class="en">Published — golgappe plate costs ₹5-6, sells for ₹20 street, ₹500 restaurant. Vendor earnings: small town ₹600, big city ₹1,100, metro hub ₹3,000/day.</span>
                             <span lang="hi" class="hi">प्रकाशित — ₹20 के गोलगप्पे की लागत ₹5-6, सड़क पर ₹20, रेस्टो में ₹500। विक्रेता की कमाई: छोटा शहर ₹600, बड़ा शहर ₹1,100, मेट्रो ₹3,000/दिन।</span>
@@ -297,10 +494,10 @@
 
                     <div class="topic-teaser animate-on-scroll">
                         <div class="topic-teaser-icon" aria-hidden="true">☀️</div>
-                        <h4 class="topic-teaser-title">
+                        <h2 class="topic-teaser-title">
                             <span lang="en" class="en">Solar: How your electricity bill becomes zero</span>
                             <span lang="hi" class="hi">सोलर: आपका बिजली बिल शून्य कैसे होता है</span>
-                        </h4>
+                        </h2>
                         <p class="topic-teaser-desc">
                             <span lang="en" class="en">Published — PM Surya Ghar Yojana subsidy: ₹78,000 for 3kW + ₹17,000 Rajasthan, making your electricity bill zero.</span>
                             <span lang="hi" class="hi">प्रकाशित — PM सूर्य घर योजना सबसिडी: 3kW के लिए ₹78,000 + राजस्थान ₹17,000, बिजली बिल शून्य।</span>
@@ -313,10 +510,10 @@
 
                     <div class="topic-teaser animate-on-scroll">
                         <div class="topic-teaser-icon" aria-hidden="true">☕</div>
-                        <h4 class="topic-teaser-title">
+                        <h2 class="topic-teaser-title">
                             <span lang="en" class="en">Chai: What the ₹10 cup really costs</span>
                             <span lang="hi" class="hi">चाय: ₹10 के कप की असली लागत</span>
-                        </h4>
+                        </h2>
                         <p class="topic-teaser-desc">
                             <span lang="en" class="en">Published — milk, sugar, and gas behind a ₹10 cup, and why 500 cups a day matter more than the price.</span>
                             <span lang="hi" class="hi">प्रकाशित — ₹10 के कप के पीछे दूध, चीनी और गैस, और क्यों 500 कप रोज़ कीमत से ज़्यादा मायने रखते हैं।</span>
@@ -329,10 +526,10 @@
 
                     <div class="topic-teaser animate-on-scroll">
                         <div class="topic-teaser-icon" aria-hidden="true">✈️</div>
-                        <h4 class="topic-teaser-title">
+                        <h2 class="topic-teaser-title">
                             <span lang="en" class="en">Aviation: Where your ₹5000 ticket goes</span>
                             <span lang="hi" class="hi">एयरलाइन: ₹5000 टिकट का पैसा कहाँ जाता है</span>
-                        </h4>
+                        </h2>
                         <p class="topic-teaser-desc">
                             <span lang="en" class="en">Published — base fare, fuel surcharge, airport fees, and GST behind a Delhi–Mumbai flight ticket. Only ~₹1,200 reaches the airline.</span>
                             <span lang="hi" class="hi">प्रकाशित — दिल्ली-मुंबई टिकट के पीछे बेस फेयर, ईंधन शुल्क, अड्डा शुल्क और GST। एयरलाइन को बस ~₹1,200 पहुँचता है।</span>
@@ -345,10 +542,10 @@
 
                     <div class="topic-teaser animate-on-scroll">
                         <div class="topic-teaser-icon" aria-hidden="true">🍿</div>
-                        <h4 class="topic-teaser-title">
+                        <h2 class="topic-teaser-title">
                             <span lang="en" class="en">Cinema: Where the real money is made</span>
                             <span lang="hi" class="hi">सिनेमा: जहाँ असली पैसा कमाया जाता है</span>
-                        </h4>
+                        </h2>
                         <p class="topic-teaser-desc">
                             <span lang="en" class="en">Published — the economics of ₹300 cinema tickets, F&B margins, and GST.</span>
                             <span lang="hi" class="hi">प्रकाशित — ₹300 सिनेमा टिकटों, F&B मार्जिन और जीएसटी की अर्थव्यवस्था।</span>
@@ -361,10 +558,10 @@
 
                     <div class="topic-teaser animate-on-scroll">
                         <div class="topic-teaser-icon" aria-hidden="true">🚕</div>
-                        <h4 class="topic-teaser-title">
+                        <h2 class="topic-teaser-title">
                             <span lang="en" class="en">Cab: How much does a driver keep from ₹100?</span>
                             <span lang="hi" class="hi">कैब: ₹100 की ride में ड्राइवर को कितना बचता है</span>
-                        </h4>
+                        </h2>
                         <p class="topic-teaser-desc">
                             <span lang="en" class="en">Published — platform commission, daily subscription model (~₹67/day), driver take-home of ~₹40-50 per ride.</span>
                             <span lang="hi" class="hi">प्रकाशित — प्लेटफ़ॉर्म कमीशन, डेली सब्सक्रिप्शन मॉडल (~₹67/दिन), ड्राइवर की प्रति ride आमदनी ~₹40-50।</span>
@@ -377,10 +574,10 @@
 
                     <div class="topic-teaser animate-on-scroll">
                         <div class="topic-teaser-icon" aria-hidden="true">🍕</div>
-                        <h4 class="topic-teaser-title">
+                        <h2 class="topic-teaser-title">
                             <span lang="en" class="en">Food: Why ₹99 pizza is too cheap</span>
                             <span lang="hi" class="hi">खाना: ₹99 पिज़्ज़ा बहुत सस्ता क्यों है</span>
-                        </h4>
+                        </h2>
                         <p class="topic-teaser-desc">
                             <span lang="en" class="en">Coming soon — the hidden math behind food delivery apps.</span>
                             <span lang="hi" class="hi">जल्द आ रहा है — फूड डिलीवरी ऐप्स के पीछे की गणित।</span>
@@ -393,10 +590,10 @@
 
                     <div class="topic-teaser animate-on-scroll">
                         <div class="topic-teaser-icon" aria-hidden="true">📊</div>
-                        <h4 class="topic-teaser-title">
+                        <h2 class="topic-teaser-title">
                             <span lang="en" class="en">Taxes: Where your TDS disappears</span>
                             <span lang="hi" class="hi">टैक्स: आपका TDS कहाँ गायब होता है</span>
-                        </h4>
+                        </h2>
                         <p class="topic-teaser-desc">
                             <span lang="en" class="en">Coming soon — the full TDS journey from salary to government.</span>
                             <span lang="hi" class="hi">जल्द आ रहा है — सैलरी से सरकार तक TDS की पूरी यात्रा।</span>
@@ -419,10 +616,10 @@
                                         <source
                                             srcset="assets/episodes/E07/E07-Thumbnail-640.webp 640w,
                                                     assets/episodes/E07/E07-Thumbnail-1280.webp 1280w,
-                                                    assets/episodes/E07/E07-Thumbnail.webp 1536w"
+                                                    assets/episodes/E07/E07-Thumbnail-1536.webp 1536w"
                                             sizes="(max-width: 768px) 100vw, 600px"
                                             type="image/webp">
-                                        <img src="assets/episodes/E07/E07-Thumbnail.jpeg" alt="Golgappe Economics" width="1536" height="864" loading="lazy" decoding="async">
+                                        <img src="assets/episodes/E07/E07-Thumbnail-16x9.jpeg" alt="Golgappe Economics" width="1536" height="864" loading="lazy" decoding="async">
                                     </picture>
                                     <span class="episode-number">07</span>
                                     <a href="https://youtube.com/shorts/I7VTxhPZe6E?utm_source=jagrukchacha-website&utm_medium=episodes&utm_campaign=episode7" target="_blank" rel="noopener" class="episode-play" aria-label="Watch Episode 7">
@@ -445,14 +642,14 @@
                                             </svg>
                                             45s
                                         </span>
-                                        <span class="episode-views" data-episode="e07" data-stat="views">
+                                        <span class="episode-views" data-episode="e07" data-stat="views" hidden>
                                             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                                 <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5 5 2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
                                             </svg>
-                                            <span class="episode-views-count">0 views</span>
+                                            <span class="episode-views-count"></span>
                                         </span>
                                     </div>
-                                    <h3 class="episode-title">बीस की गोलगप्पे... पांच की लागत!</h3>
+                                    <h2 class="episode-title">बीस की गोलगप्पे... पांच की लागत!</h2>
                                     <p class="episode-desc">
                                         <span lang="en" class="en">₹20 plate of golgappes costs ₹5-6 to make, but restaurants sell them for ₹500. Street vendor earnings: small town ₹600, big city ₹1,100, metro hub ₹3,000/day.</span>
                                         <span lang="hi" class="hi">₹20 की गोलगप्पे... ₹5-6 की लागत! सड़क पर ₹20, रेस्टो में ₹500 — दुकानदार की असली कमाई शहर के हिसाब से।</span>
@@ -491,7 +688,6 @@
                                     </div>
                                 </div>
                             </article>
-
 <!-- Episode 6 (newest) -->
                             <article class="episode-card animate-on-scroll">
                                 <div class="episode-thumbnail">
@@ -499,10 +695,10 @@
                                         <source
                                             srcset="assets/episodes/E06/E06-Thumbnail-640.webp 640w,
                                                     assets/episodes/E06/E06-Thumbnail-1280.webp 1280w,
-                                                    assets/episodes/E06/E06-Thumbnail.webp 1536w"
+                                                    assets/episodes/E06/E06-Thumbnail-1536.webp 1536w"
                                             sizes="(max-width: 768px) 100vw, 600px"
                                             type="image/webp">
-                                        <img src="assets/episodes/E06/E06-Thumbnail.jpeg" alt="Solar Panel Economics" width="1536" height="864" loading="lazy" decoding="async">
+                                        <img src="assets/episodes/E06/E06-Thumbnail-16x9.jpeg" alt="Solar Panel Economics" width="1536" height="864" loading="lazy" decoding="async">
                                     </picture>
                                     <span class="episode-number">06</span>
                                     <a href="https://youtube.com/shorts/s054hppNqQw?utm_source=jagrukchacha-website&utm_medium=episodes&utm_campaign=episode6" target="_blank" rel="noopener" class="episode-play" aria-label="Watch Episode 6">
@@ -525,14 +721,14 @@
                                             </svg>
                                             87s
                                         </span>
-                                        <span class="episode-views" data-episode="e06" data-stat="views">
+                                        <span class="episode-views" data-episode="e06" data-stat="views" hidden>
                                             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                                 <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5 5 2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
                                             </svg>
-                                            <span class="episode-views-count">0 views</span>
+                                            <span class="episode-views-count"></span>
                                         </span>
                                     </div>
-                                    <h3 class="episode-title">बिजली बिल 0 — सोलर पैनल लगाने का हिसाब</h3>
+                                    <h2 class="episode-title">बिजली बिल 0 — सोलर पैनल लगाने का हिसाब</h2>
                                     <p class="episode-desc">
                                         <span lang="en" class="en">How your electricity bill becomes zero with PM Surya Ghar Yojana — ₹78,000 subsidy for a 3kW system + ₹17,000 Rajasthan bonus. The math behind free electricity.</span>
                                         <span lang="hi" class="hi">PM सूर्य घर योजना से बिजली बिल शून्य — 3kW सिस्टम के लिए ₹78,000 सबसिडी + राजस्थान बोनस ₹17,000। निःशुल्क बिजली की गणित।</span>
@@ -571,7 +767,6 @@
                                     </div>
                                 </div>
                             </article>
-
                             <!-- Episode 5 -->
                             <article class="episode-card animate-on-scroll">
                                 <div class="episode-thumbnail">
@@ -579,10 +774,10 @@
                                         <source
                                             srcset="assets/episodes/E05/E05-Thumbnail-640.webp 640w,
                                                     assets/episodes/E05/E05-Thumbnail-1280.webp 1280w,
-                                                    assets/episodes/E05/E05-Thumbnail.webp 1536w"
+                                                    assets/episodes/E05/E05-Thumbnail-1536.webp 1536w"
                                             sizes="(max-width: 768px) 100vw, 600px"
                                             type="image/webp">
-                                        <img src="assets/episodes/E05/E05-Thumbnail.jpeg" alt="Cab Ride Economics" width="1536" height="864" loading="lazy" decoding="async">
+                                        <img src="assets/episodes/E05/E05-Thumbnail-16x9.jpeg" alt="Cab Ride Economics" width="1536" height="864" loading="lazy" decoding="async">
                                     </picture>
                                     <span class="episode-number">05</span>
                                     <a href="https://youtube.com/shorts/F58WUJiMDfw?utm_source=jagrukchacha-website&utm_medium=episodes" target="_blank" rel="noopener" class="episode-play" aria-label="Watch Episode 5">
@@ -605,14 +800,14 @@
                                             </svg>
                                             47s
                                         </span>
-                                        <span class="episode-views" data-episode="e05" data-stat="views">
+                                        <span class="episode-views" data-episode="e05" data-stat="views" hidden>
                                             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                                 <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5 5 2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
                                             </svg>
-                                            <span class="episode-views-count">0 views</span>
+                                            <span class="episode-views-count"></span>
                                         </span>
                                     </div>
-                                    <h3 class="episode-title">सौ के ride में ड्राइवर की जेब में कितना बचता है?</h3>
+                                    <h2 class="episode-title">सौ के ride में ड्राइवर की जेब में कितना बचता है?</h2>
                                     <p class="episode-desc">
                                         <span lang="en" class="en">How much does a cab driver actually keep from a ₹100 ride? With the platform's commission now a daily subscription of ~₹67, drivers take home only about ₹40-50 per ride.</span>
                                         <span lang="hi" class="hi">सौ के ride में ड्राइवर की जेब में लगभग 40-50 बचता है — ऐप की कमाई अब daily subscription से होती है (~₹67/दिन)</span>
@@ -651,7 +846,244 @@
                                     </div>
                                 </div>
                             </article>
-
+                <!-- Episode 4 -->
+                <!-- Episode 4 -->
+<article class="episode-card animate-on-scroll">
+                                <div class="episode-thumbnail">
+                                    <picture>
+                                        <source
+                                            srcset="assets/episodes/E04/E04-Thumbnail-640.webp 640w,
+                                                    assets/episodes/E04/E04-Thumbnail-1280.webp 1280w,
+                                                    assets/episodes/E04/E04-Thumbnail-1536.webp 1536w"
+                                            sizes="(max-width: 768px) 100vw, 600px"
+                                            type="image/webp">
+                                        <img src="assets/episodes/E04/E04-Thumbnail-16x9.jpeg" alt="Flight Ticket Economics" width="1536" height="864" loading="lazy" decoding="async">
+                                    </picture>
+                                    <span class="episode-number">04</span>
+                                    <a href="https://youtube.com/shorts/pML6VN7OIEA?utm_source=jagrukchacha-website&utm_medium=episodes" target="_blank" rel="noopener" class="episode-play" aria-label="Watch Episode 4">
+                                        <div class="episode-play-btn">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M8 5v14l11-7z"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="episode-content">
+                                    <div class="episode-top">
+                                        <span class="episode-tag">
+                                            <span lang="en" class="en">Episode 4</span>
+                                            <span lang="hi" class="hi">चौथा एपिसोड</span>
+                                        </span>
+                                        <span class="episode-duration">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                                            </svg>
+                                            47s
+                                        </span>
+                                        <span class="episode-views" data-episode="e04" data-stat="views" hidden>
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5 5 2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                                            </svg>
+                                            <span class="episode-views-count"></span>
+                                        </span>
+                                    </div>
+                                    <h2 class="episode-title">₹5000 का टिकट — एयरलाइन को कितना मिलता है?</h2>
+                                    <p class="episode-desc">
+                                        <span lang="en" class="en">How much does an airline actually keep from a ₹5000 flight ticket? Base fare is roughly ₹3,600, but taxes, fuel, and airport charges make up the rest — only about ₹1,200 goes to the airline itself.</span>
+                                        <span lang="hi" class="hi">₹5000 के टिकट में से एयरलाइन को वास्तव में कितना मिलता है? बेस फेयर लगभग ₹3,600, लेकिन कर, ईंधन और अड्डा शुल्क बाकी हैं — एयरलाइन को बस ~₹1,200 पहुँचता है।</span>
+                                    </p>
+                                    <!-- Latin hashtags render as clickable links on YouTube; Devanagari on Instagram/Facebook -->
+                                    <div class="episode-hashtags episode-hashtags-en">#Aviation #Economics #RupayeKiKahani #Bharat</div>
+                                    <div class="episode-hashtags episode-hashtags-hi">#एयरलाइन #अर्थव्यवस्था #रुपया #भारत</div>
+                                    <div class="episode-meta">
+                                        <span class="episode-date">
+                                            <span lang="en" class="en">September 18, 2026</span>
+                                            <span lang="hi" class="hi">18 सितंबर, 2026</span>
+                                        </span>
+                                    </div>
+                                    <div class="episode-platform-links">
+                                        <a href="https://youtube.com/shorts/pML6VN7OIEA?utm_source=jagrukchacha-website&utm_medium=episodes" target="_blank" rel="noopener" class="episode-platform-link youtube" aria-label="Watch on YouTube">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                            </svg>
+                                            <span lang="en" class="en">YouTube</span>
+                                            <span lang="hi" class="hi">YouTube</span>
+                                        </a>
+                                        <a href="https://www.instagram.com/reel/DdbgF-HzV3C/?utm_source=jagrukchacha-website&utm_medium=episodes&utm_campaign=episode4" target="_blank" rel="noopener" class="episode-platform-link instagram" aria-label="Watch on Instagram">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-4.92-.058-1.265-.07-1.644.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                            </svg>
+                                            <span lang="en" class="en">Instagram</span>
+                                            <span lang="hi" class="hi">Instagram</span>
+                                        </a>
+                                        <a href="https://www.facebook.com/share/r/1Semqta54A/?utm_source=jagrukchacha-website&utm_medium=episodes&utm_campaign=episode4" target="_blank" rel="noopener" class="episode-platform-link facebook" aria-label="Watch on Facebook">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                            </svg>
+                                            <span lang="en" class="en">Facebook</span>
+                                            <span lang="hi" class="hi">Facebook</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Episode 3 -->
+                            <article class="episode-card animate-on-scroll">
+                                <div class="episode-thumbnail">
+                                    <picture>
+                                        <source
+                                            srcset="assets/episodes/E03/E03-Thumbnail-640.webp 640w,
+                                                    assets/episodes/E03/E03-Thumbnail-1280.webp 1280w,
+                                                    assets/episodes/E03/E03-Thumbnail-1536.webp 1536w"
+                                            sizes="(max-width: 768px) 100vw, 600px"
+                                            type="image/webp">
+                                        <img src="assets/episodes/E03/E03-Thumbnail-16x9.jpeg" alt="Chai Economics" width="1536" height="864" loading="lazy" decoding="async">
+                                    </picture>
+                                    <span class="episode-number">03</span>
+                                    <a href="https://youtube.com/shorts/peCfxJ1HdnI?utm_source=jagrukchacha-website&utm_medium=episodes" target="_blank" rel="noopener" class="episode-play" aria-label="Watch Episode 3">
+                                        <div class="episode-play-btn">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M8 5v14l11-7z"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="episode-content">
+                                    <div class="episode-top">
+                                        <span class="episode-tag">
+                                            <span lang="en" class="en">Episode 3</span>
+                                            <span lang="hi" class="hi">तीसरा एपिसोड</span>
+                                        </span>
+                                        <span class="episode-duration">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                                            </svg>
+                                            47s
+                                        </span>
+                                        <span class="episode-views" data-episode="e03" data-stat="views" hidden>
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5 5 2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                                            </svg>
+                                            <span class="episode-views-count"></span>
+                                        </span>
+                                    </div>
+                                    <h2 class="episode-title">₹10 Chai — Chaiwala Earnings?</h2>
+                                    <p class="episode-desc">
+                                        <span lang="en" class="en">How much does a chaiwala actually keep from a ₹10 cup of chai? Milk costs roughly ₹2, sugar ₹1, tea leaves ₹1, and gas plus the cup about ₹0.50 — a total cost of ~₹4.50, leaving ~₹5.50 per cup. But the real money is not in one cup — it is in the ~500 cups sold every day.</span>
+                                        <span lang="hi" class="hi">₹10 की चाय से चायवाले को असल में कितना बचता है? दूध लगभग ₹2, चीनी ₹1, चाय पत्ती ₹1, और गैस-कप करीब ₹0.50 — कुल लागत ~₹4.50, यानी हर कप पर ~₹5.50। लेकिन असली पैसा एक कप में नहीं — रोज़ बिकने वाले लगभग 500 कप में है।</span>
+                                    </p>
+                                    <!-- Latin hashtags render as clickable links on YouTube; Devanagari on Instagram/Facebook -->
+                                    <div class="episode-hashtags episode-hashtags-en">#Chai #Economics #Food #RupayeKiKahani #Bharat</div>
+                                    <div class="episode-hashtags episode-hashtags-hi">#चाय #अर्थव्यवस्था #खाना #रुपया #भारत</div>
+                                    <div class="episode-meta">
+                                        <span class="episode-date">
+                                            <span lang="en" class="en">September 12, 2026</span>
+                                            <span lang="hi" class="hi">12 सितंबर, 2026</span>
+                                        </span>
+                                    </div>
+                                    <div class="episode-platform-links">
+                                        <a href="https://youtube.com/shorts/peCfxJ1HdnI?utm_source=jagrukchacha-website&utm_medium=episodes" target="_blank" rel="noopener" class="episode-platform-link youtube" aria-label="Watch on YouTube">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                            </svg>
+                                            <span lang="en" class="en">YouTube</span>
+                                            <span lang="hi" class="hi">YouTube</span>
+                                        </a>
+                                        <a href="https://www.instagram.com/reel/DdMGwy6zJSQ/?utm_source=jagrukchacha-website&utm_medium=episodes&utm_campaign=episode3" target="_blank" rel="noopener" class="episode-platform-link instagram" aria-label="Watch on Instagram">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-4.92-.058-1.265-.07-1.644.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                            </svg>
+                                            <span lang="en" class="en">Instagram</span>
+                                            <span lang="hi" class="hi">Instagram</span>
+                                        </a>
+                                        <a href="https://www.facebook.com/reel/1087500463666238?utm_source=jagrukchacha-website&utm_medium=episodes&utm_campaign=episode3" target="_blank" rel="noopener" class="episode-platform-link facebook" aria-label="Watch on Facebook">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                            </svg>
+                                            <span lang="en" class="en">Facebook</span>
+                                            <span lang="hi" class="hi">Facebook</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Episode 2 -->
+                            <article class="episode-card animate-on-scroll">
+                                <div class="episode-thumbnail">
+                                    <picture>
+                                        <source
+                                            srcset="assets/episodes/E02/E02-Thumbnail-640.webp 640w,
+                                                        assets/episodes/E02/E02-Thumbnail-1280.webp 1280w,
+                                                        assets/episodes/E02/E02-Thumbnail-1536.webp 1920w"
+                                            sizes="(max-width: 768px) 100vw, 600px"
+                                            type="image/webp">
+                                        <img src="assets/episodes/E02/E02-Thumbnail-16x9.jpeg" alt="Cinema Economics" width="1536" height="864" loading="lazy" decoding="async">
+                                    </picture>
+                                    <span class="episode-number">02</span>
+                                    <a href="https://youtube.com/shorts/Q6floi3cDLE?utm_source=jagrukchacha-website&utm_medium=episodes" target="_blank" rel="noopener" class="episode-play" aria-label="Watch Episode 2">
+                                        <div class="episode-play-btn">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M8 5v14l11-7z"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="episode-content">
+                                    <div class="episode-top">
+                                        <span class="episode-tag">
+                                            <span lang="en" class="en">Episode 2</span>
+                                            <span lang="hi" class="hi">दूसरा एपिसोड</span>
+                                        </span>
+                                        <span class="episode-duration">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                                            </svg>
+                                            45s
+                                        </span>
+                                        <span class="episode-views" data-episode="e02" data-stat="views" hidden>
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5 5 2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                                            </svg>
+                                            <span class="episode-views-count"></span>
+                                        </span>
+                                    </div>
+                                    <h2 class="episode-title">₹300 Ticket — Cinema Owner Earnings?</h2>
+                                    <p class="episode-desc">
+                                        <span lang="en" class="en">How much does a cinema owner actually keep from a ₹300 ticket? Cinema halls share roughly 50% of net ticket revenue with the film distributor. But the real business is F&B — popcorn and cold drinks with ~75% margin.</span>
+                                        <span lang="hi" class="hi">₹300 के टिकट से सिनेमा मालिक को कितना बचता है? सिनेमा हॉल नेट टिकट रेवेन्यू का लगभग 50% फिल्म डिस्ट्रीब्यूटर को देते हैं। लेकिन असली व्यवसाय F&B है — पॉपकॉर्न और कोल्ड ड्रिंक में ~75% मार्जिन।</span>
+                                    </p>
+                                    <!-- Latin hashtags render as clickable links on YouTube; Devanagari on Instagram/Facebook -->
+                                    <div class="episode-hashtags episode-hashtags-en">#Cinema #Economics #F&B #RupayeKiKahani #Bharat</div>
+                                    <div class="episode-hashtags episode-hashtags-hi">#सिनेमा #अर्थव्यवस्था #एफएंड #रुपया #भारत</div>
+                                    <div class="episode-meta">
+                                        <span class="episode-date">
+                                            <span lang="en" class="en">September 8, 2026</span>
+                                            <span lang="hi" class="hi">8 सितंबर, 2026</span>
+                                        </span>
+                                    </div>
+                                    <div class="episode-platform-links">
+                                        <a href="https://youtube.com/shorts/Q6floi3cDLE?utm_source=jagrukchacha-website&utm_medium=episodes" target="_blank" rel="noopener" class="episode-platform-link youtube" aria-label="Watch on YouTube">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                            </svg>
+                                            <span lang="en" class="en">YouTube</span>
+                                            <span lang="hi" class="hi">YouTube</span>
+                                        </a>
+                                        <a href="https://www.instagram.com/reel/DdBvlEizdJD/?utm_source=jagrukchacha-website&utm_medium=episodes&utm_campaign=episode2" target="_blank" rel="noopener" class="episode-platform-link instagram" aria-label="Watch on Instagram">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-4.92-.058-1.265-.07-1.644.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                            </svg>
+                                            <span lang="en" class="en">Instagram</span>
+                                            <span lang="hi" class="hi">Instagram</span>
+                                        </a>
+                                        <a href="https://www.facebook.com/reel/1741181130654191?utm_source=jagrukchacha-website&utm_medium=episodes&utm_campaign=episode2" target="_blank" rel="noopener" class="episode-platform-link facebook" aria-label="Watch on Facebook">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                            </svg>
+                                            <span lang="en" class="en">Facebook</span>
+                                            <span lang="hi" class="hi">Facebook</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
                             <!-- Episode 1 -->
                             <article class="episode-card animate-on-scroll">
                                 <div class="episode-thumbnail">
@@ -659,10 +1091,10 @@
                                         <source
                                             srcset="assets/episodes/E01/E01-Thumbnail-640.webp 640w,
                                                     assets/episodes/E01/E01-Thumbnail-1280.webp 1280w,
-                                                    assets/episodes/E01/E01-Thumbnail.webp 1920w"
+                                                    assets/episodes/E01/E01-Thumbnail-1536.webp 1920w"
                                             sizes="(max-width: 768px) 100vw, 600px"
                                             type="image/webp">
-                                        <img src="assets/episodes/E01/E01-Thumbnail.jpeg" alt="Petrol Pump Earnings" width="1920" height="1080" loading="lazy" decoding="async">
+                                        <img src="assets/episodes/E01/E01-Thumbnail-16x9.jpeg" alt="Petrol Pump Earnings" width="1536" height="864" loading="lazy" decoding="async">
                                     </picture>
                                     <span class="episode-number">01</span>
                                     <a href="https://www.youtube.com/shorts/43lMkjWerr8?utm_source=jagrukchacha-website&utm_medium=episodes" target="_blank" rel="noopener" class="episode-play" aria-label="Watch Episode 1">
@@ -685,14 +1117,14 @@
                                             </svg>
                                             52s
                                         </span>
-                                        <span class="episode-views" data-episode="e01" data-stat="views">
+                                        <span class="episode-views" data-episode="e01" data-stat="views" hidden>
                                             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                                 <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5 5 2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
                                             </svg>
-                                            <span class="episode-views-count">1.2K views</span>
+                                            <span class="episode-views-count"></span>
                                         </span>
                                     </div>
-                                    <h3 class="episode-title">⛽ Petrol Pump Earning?</h3>
+                                    <h2 class="episode-title">⛽ Petrol Pump Earning?</h2>
                                     <p class="episode-desc">
                                         <span lang="en" class="en">How much does a Petrol Pump Owner actually earn on ₹100? With margins of roughly ₹1-2 per litre, petrol pumps survive on volume — a single pump serves hundreds of vehicles daily. But the real profits come from the shop: lubricants, snacks, chai, and the convenience premium.</span>
                                         <span lang="hi" class="hi">₹100 पर पेट्रोल पंप मालिक को वास्तव में कितना बचता है? प्रति लीटर ₹1-2 के मार्जिन से, पेट्रोल पंप आवास पर चलते हैं — एक पम्प प्रतिदिन सैकड़ों वाहनों की सेवा करता है। लेकिन असली लाभ दुकान से आता है: ल्यूब्रिकेंट्स, स्नैक्स, चाय, और सुविधा प्रीमियम से।</span>
@@ -732,174 +1164,14 @@
                                 </div>
                             </article>
 
-                            <!-- Episode 2 -->
-                            <article class="episode-card animate-on-scroll">
-                                <div class="episode-thumbnail">
-                                    <picture>
-                                        <source
-                                            srcset="assets/episodes/E02/E02-Thumbnail-640.webp 640w,
-                                                        assets/episodes/E02/E02-Thumbnail-1280.webp 1280w,
-                                                        assets/episodes/E02/E02-Thumbnail.webp 1920w"
-                                            sizes="(max-width: 768px) 100vw, 600px"
-                                            type="image/webp">
-                                        <img src="assets/episodes/E02/E02-Thumbnail.jpeg" alt="Cinema Economics" width="1920" height="1080" loading="lazy" decoding="async">
-                                    </picture>
-                                    <span class="episode-number">02</span>
-                                    <a href="https://youtube.com/shorts/Q6floi3cDLE?utm_source=jagrukchacha-website&utm_medium=episodes" target="_blank" rel="noopener" class="episode-play" aria-label="Watch Episode 2">
-                                        <div class="episode-play-btn">
-                                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                                <path d="M8 5v14l11-7z"/>
-                                            </svg>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="episode-content">
-                                    <div class="episode-top">
-                                        <span class="episode-tag">
-                                            <span lang="en" class="en">Episode 2</span>
-                                            <span lang="hi" class="hi">दूसरा एपिसोड</span>
-                                        </span>
-                                        <span class="episode-duration">
-                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
-                                            </svg>
-                                            45s
-                                        </span>
-                                        <span class="episode-views" data-episode="e02" data-stat="views">
-                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5 5 2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
-                                            </svg>
-                                            <span class="episode-views-count">0 views</span>
-                                        </span>
-                                    </div>
-                                    <h3 class="episode-title">₹300 Ticket — Cinema Owner Earnings?</h3>
-                                    <p class="episode-desc">
-                                        <span lang="en" class="en">How much does a cinema owner actually keep from a ₹300 ticket? Cinema halls share roughly 50% of net ticket revenue with the film distributor. But the real business is F&B — popcorn and cold drinks with ~75% margin.</span>
-                                        <span lang="hi" class="hi">₹300 के टिकट से सिनेमा मालिक को कितना बचता है? सिनेमा हॉल नेट टिकट रेवेन्यू का लगभग 50% फिल्म डिस्ट्रीब्यूटर को देते हैं। लेकिन असली व्यवसाय F&B है — पॉपकॉर्न और कोल्ड ड्रिंक में ~75% मार्जिन।</span>
-                                    </p>
-                                    <!-- Latin hashtags render as clickable links on YouTube; Devanagari on Instagram/Facebook -->
-                                    <div class="episode-hashtags episode-hashtags-en">#Cinema #Economics #F&B #RupayeKiKahani #Bharat</div>
-                                    <div class="episode-hashtags episode-hashtags-hi">#सिनेमा #अर्थव्यवस्था #एफएंड #रुपया #भारत</div>
-                                    <div class="episode-meta">
-                                        <span class="episode-date">
-                                            <span lang="en" class="en">September 8, 2026</span>
-                                            <span lang="hi" class="hi">8 सितंबर, 2026</span>
-                                        </span>
-                                    </div>
-                                    <div class="episode-platform-links">
-                                        <a href="https://youtube.com/shorts/Q6floi3cDLE?utm_source=jagrukchacha-website&utm_medium=episodes" target="_blank" rel="noopener" class="episode-platform-link youtube" aria-label="Watch on YouTube">
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                                            </svg>
-                                            <span lang="en" class="en">YouTube</span>
-                                            <span lang="hi" class="hi">YouTube</span>
-                                        </a>
-                                        <a href="https://www.instagram.com/reel/DdBvlEizdJD/?utm_source=jagrukchacha-website&utm_medium=episodes&utm_campaign=episode2" target="_blank" rel="noopener" class="episode-platform-link instagram" aria-label="Watch on Instagram">
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-4.92-.058-1.265-.07-1.644.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                                            </svg>
-                                            <span lang="en" class="en">Instagram</span>
-                                            <span lang="hi" class="hi">Instagram</span>
-                                        </a>
-                                        <a href="https://www.facebook.com/reel/1741181130654191?utm_source=jagrukchacha-website&utm_medium=episodes&utm_campaign=episode2" target="_blank" rel="noopener" class="episode-platform-link facebook" aria-label="Watch on Facebook">
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                                            </svg>
-                                            <span lang="en" class="en">Facebook</span>
-                                            <span lang="hi" class="hi">Facebook</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <!-- Episode 3 -->
-                            <article class="episode-card animate-on-scroll">
-                                <div class="episode-thumbnail">
-                                    <picture>
-                                        <source
-                                            srcset="assets/episodes/E03/E03-Thumbnail-640.webp 640w,
-                                                    assets/episodes/E03/E03-Thumbnail-1280.webp 1280w,
-                                                    assets/episodes/E03/E03-Thumbnail.webp 1536w"
-                                            sizes="(max-width: 768px) 100vw, 600px"
-                                            type="image/webp">
-                                        <img src="assets/episodes/E03/E03-Thumbnail.jpeg" alt="Chai Economics" width="1536" height="864" loading="lazy" decoding="async">
-                                    </picture>
-                                    <span class="episode-number">03</span>
-                                    <a href="https://youtube.com/shorts/peCfxJ1HdnI?utm_source=jagrukchacha-website&utm_medium=episodes" target="_blank" rel="noopener" class="episode-play" aria-label="Watch Episode 3">
-                                        <div class="episode-play-btn">
-                                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                                <path d="M8 5v14l11-7z"/>
-                                            </svg>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="episode-content">
-                                    <div class="episode-top">
-                                        <span class="episode-tag">
-                                            <span lang="en" class="en">Episode 3</span>
-                                            <span lang="hi" class="hi">तीसरा एपिसोड</span>
-                                        </span>
-                                        <span class="episode-duration">
-                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
-                                            </svg>
-                                            47s
-                                        </span>
-                                        <span class="episode-views" data-episode="e03" data-stat="views">
-                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5 5 2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
-                                            </svg>
-                                            <span class="episode-views-count">0 views</span>
-                                        </span>
-                                    </div>
-                                    <h3 class="episode-title">₹10 Chai — Chaiwala Earnings?</h3>
-                                    <p class="episode-desc">
-                                        <span lang="en" class="en">How much does a chaiwala actually keep from a ₹10 cup of chai? Milk costs roughly ₹2, sugar ₹1, tea leaves ₹1, and gas plus the cup about ₹0.50 — a total cost of ~₹4.50, leaving ~₹5.50 per cup. But the real money is not in one cup — it is in the ~500 cups sold every day.</span>
-                                        <span lang="hi" class="hi">₹10 की चाय से चायवाले को असल में कितना बचता है? दूध लगभग ₹2, चीनी ₹1, चाय पत्ती ₹1, और गैस-कप करीब ₹0.50 — कुल लागत ~₹4.50, यानी हर कप पर ~₹5.50। लेकिन असली पैसा एक कप में नहीं — रोज़ बिकने वाले लगभग 500 कप में है।</span>
-                                    </p>
-                                    <!-- Latin hashtags render as clickable links on YouTube; Devanagari on Instagram/Facebook -->
-                                    <div class="episode-hashtags episode-hashtags-en">#Chai #Economics #Food #RupayeKiKahani #Bharat</div>
-                                    <div class="episode-hashtags episode-hashtags-hi">#चाय #अर्थव्यवस्था #खाना #रुपया #भारत</div>
-                                    <div class="episode-meta">
-                                        <span class="episode-date">
-                                            <span lang="en" class="en">September 12, 2026</span>
-                                            <span lang="hi" class="hi">12 सितंबर, 2026</span>
-                                        </span>
-                                    </div>
-                                    <div class="episode-platform-links">
-                                        <a href="https://youtube.com/shorts/peCfxJ1HdnI?utm_source=jagrukchacha-website&utm_medium=episodes" target="_blank" rel="noopener" class="episode-platform-link youtube" aria-label="Watch on YouTube">
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                                            </svg>
-                                            <span lang="en" class="en">YouTube</span>
-                                            <span lang="hi" class="hi">YouTube</span>
-                                        </a>
-                                        <a href="https://www.instagram.com/reel/DdMGwy6zJSQ/?utm_source=jagrukchacha-website&utm_medium=episodes&utm_campaign=episode3" target="_blank" rel="noopener" class="episode-platform-link instagram" aria-label="Watch on Instagram">
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-4.92-.058-1.265-.07-1.644.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                                            </svg>
-                                            <span lang="en" class="en">Instagram</span>
-                                            <span lang="hi" class="hi">Instagram</span>
-                                        </a>
-                                        <a href="https://www.facebook.com/reel/1087500463666238?utm_source=jagrukchacha-website&utm_medium=episodes&utm_campaign=episode3" target="_blank" rel="noopener" class="episode-platform-link facebook" aria-label="Watch on Facebook">
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                                            </svg>
-                                            <span lang="en" class="en">Facebook</span>
-                                            <span lang="hi" class="hi">Facebook</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-
                             <!-- Placeholder for future episodes -->
                             <div class="episodes-coming-soon">
                                 <div class="coming-soon-card animate-on-scroll">
                                     <div class="coming-soon-icon">✅</div>
-                                    <h3 class="coming-soon-title">
+                                    <h2 class="coming-soon-title">
                                         <span lang="en" class="en">More Episodes on the Way</span>
                                         <span lang="hi" class="hi">अधिक एपिसोड जल्द</span>
-                                    </h3>
+                                    </h2>
                                     <p class="coming-soon-desc">
                                         <span lang="en" class="en">New episodes drop regularly on YouTube Shorts and Instagram Reels.</span>
                                         <span lang="hi" class="hi">नए एपिसोड नियमित रूप से YouTube Shorts और Instagram Reels पर रिलीज़ होते हैं।</span>
@@ -957,10 +1229,10 @@
                     </div>
                 </div>
                 <div class="footer-links">
-                    <h4>
+                    <h3>
                         <span lang="en" class="en">Quick Links</span>
                         <span lang="hi" class="hi">त्वरित लिंक</span>
-                    </h4>
+                    </h3>
                     <ul>
                         <li><a href="index.html"><span lang="en" class="en">Home</span><span lang="hi" class="hi">होम</span></a></li>
                         <li><a href="index.html#about"><span lang="en" class="en">About</span><span lang="hi" class="hi">हमारे बारे में</span></a></li>
@@ -969,10 +1241,10 @@
                     </ul>
                 </div>
                 <div class="footer-links legal-links">
-                    <h4>
+                    <h3>
                         <span lang="en" class="en">Legal</span>
                         <span lang="hi" class="hi">कानूनी</span>
-                    </h4>
+                    </h3>
                     <ul>
                         <li><a href="privacy.html"><span lang="en" class="en">Privacy Policy</span><span lang="hi" class="hi">गोपनीयता नीति</span></a></li>
                         <li><a href="terms.html"><span lang="en" class="en">Terms of Service</span><span lang="hi" class="hi">सेवा की शर्तें</span></a></li>

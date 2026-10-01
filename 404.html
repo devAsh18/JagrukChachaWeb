@@ -21,8 +21,8 @@
     <meta name="robots" content="noindex, follow">
     <meta name="description" content="The page you're looking for doesn't exist.">
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://jagrukchacha.com/">
+    <!-- No canonical: a 404 has no canonical URL, and pointing one at the
+         homepage asks search engines to fold this response into it. -->
 
     <!-- Favicon + Apple touch icon -->
     <link rel="icon" type="image/png" href="assets/favicon-32.png">
@@ -59,7 +59,7 @@
     <meta property="og:description" content="This page seems to have vanished — like money disappearing at a petrol pump.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jagrukchacha.com/404.html">
-    <meta property="og:image" content="https://jagrukchacha.com/assets/JC_CoverPhoto.webp">
+    <meta property="og:image" content="https://jagrukchacha.com/assets/og-image.jpg">
     <meta property="og:locale" content="en_IN">
     <meta property="og:locale:alternate" content="hi_IN">
     <meta property="og:site_name" content="Jagruk Chacha">
@@ -68,7 +68,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="404 — Page Not Found | Jagruk Chacha">
     <meta name="twitter:description" content="This page seems to have vanished — like money disappearing at a petrol pump.">
-    <meta name="twitter:image" content="https://jagrukchacha.com/assets/JC_CoverPhoto.webp">
+    <meta name="twitter:image" content="https://jagrukchacha.com/assets/og-image.jpg">
 
     <!-- Fonts — only weights 400/600/700 that the design uses -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,8 +79,8 @@
     <script defer data-domain="jagrukchacha.com" src="https://plausible.io/js/script.js"></script>
 
     <!-- Non-critical styles — deferred so they don't block first paint -->
-    <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+    <link rel="stylesheet" href="css/styles.css?v=12" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/styles.css?v=12"></noscript>
     <script src="js/main.js" defer></script>
 </head>
 <body>

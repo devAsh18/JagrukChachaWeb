@@ -1,61 +1,124 @@
 {
-  "_comment": "Jagruk Chacha — Episode statistics. Update weekly or via GitHub Actions cron (YouTube Data API). Fetched by main.js with 24h localStorage cache.",
-  "lastUpdated": "2026-09-27T00:00:00Z",
+  "_comment": "Jagruk Chacha — Episode statistics. Fetched by js/main.js with no client-side cache (the GitHub Pages CDN handles freshness). Update manually or via a GitHub Actions cron job using the YouTube Data API. A views value of 0 means 'not counted yet' and the badge stays hidden.",
+  "lastUpdated": "2026-10-02T00:00:00Z",
   "episodes": {
     "e07": {
       "videoId": "I7VTxhPZe6E",
       "platforms": {
-        "youtube": { "views": 0, "link": "https://youtube.com/shorts/I7VTxhPZe6E" },
-        "instagram": { "views": 0, "link": "https://www.instagram.com/reel/Dd1Z3mDjQq8/" },
-        "facebook": { "views": 0, "link": "https://www.facebook.com/share/r/1Bz8x26m3P/" }
+        "youtube": {
+          "views": 0,
+          "link": "https://youtube.com/shorts/I7VTxhPZe6E"
+        },
+        "instagram": {
+          "views": 0,
+          "link": "https://www.instagram.com/reel/Dd1Z3mDjQq8/"
+        },
+        "facebook": {
+          "views": 0,
+          "link": "https://www.facebook.com/share/r/1Bz8x26m3P/"
+        }
       }
     },
     "e06": {
       "videoId": "s054hppNqQw",
       "platforms": {
-        "youtube": { "views": 0, "link": "https://youtube.com/shorts/s054hppNqQw" },
-        "instagram": { "views": 0, "link": "https://www.instagram.com/reel/DdtoM9GDA1Q/" },
-        "facebook": { "views": 0, "link": "https://www.facebook.com/share/r/1Eoq2RAJAk/" }
+        "youtube": {
+          "views": 0,
+          "link": "https://youtube.com/shorts/s054hppNqQw"
+        },
+        "instagram": {
+          "views": 0,
+          "link": "https://www.instagram.com/reel/DdtoM9GDA1Q/"
+        },
+        "facebook": {
+          "views": 0,
+          "link": "https://www.facebook.com/share/r/1Eoq2RAJAk/"
+        }
       }
     },
     "e05": {
       "videoId": "F58WUJiMDfw",
       "platforms": {
-        "youtube": { "views": 0, "link": "https://youtube.com/shorts/F58WUJiMDfw" },
-        "instagram": { "views": 0, "link": "https://www.instagram.com/reel/DdoXnbRgRBj/" },
-        "facebook": { "views": 0, "link": "https://www.facebook.com/share/r/1Bv888aLa8/" }
+        "youtube": {
+          "views": 0,
+          "link": "https://youtube.com/shorts/F58WUJiMDfw"
+        },
+        "instagram": {
+          "views": 0,
+          "link": "https://www.instagram.com/reel/DdoXnbRgRBj/"
+        },
+        "facebook": {
+          "views": 0,
+          "link": "https://www.facebook.com/share/r/1Bv888aLa8/"
+        }
       }
     },
     "e04": {
       "videoId": "pML6VN7OIEA",
       "platforms": {
-        "youtube": { "views": 0, "link": "https://youtube.com/shorts/pML6VN7OIEA" },
-        "instagram": { "views": 0, "link": "https://www.instagram.com/reel/DdbgF-HzV3C/" },
-        "facebook": { "views": 0, "link": "https://www.facebook.com/share/r/1Semqta54A/" }
-      }
-    },
-    "e01": {
-      "videoId": "43lMkjWerr8",
-      "platforms": {
-        "youtube": { "views": 1247, "link": "https://www.youtube.com/shorts/43lMkjWerr8" },
-        "instagram": { "views": 892, "link": "https://www.instagram.com/reel/Dc6ExxHzsaW/" },
-        "facebook": { "views": 341, "link": "https://www.facebook.com/share/r/1csWNxgk8z/" }
-      }
-    },
-    "e02": {
-      "videoId": "Q6floi3cDLE",
-      "platforms": {
-        "youtube": { "views": 0, "link": "https://youtube.com/shorts/Q6floi3cDLE" },
-        "instagram": { "views": 0, "link": "https://www.instagram.com/reel/DdBvlEizdJD/" },
-        "facebook": { "views": 0, "link": "https://www.facebook.com/reel/1741181130654191" }
+        "youtube": {
+          "views": 0,
+          "link": "https://youtube.com/shorts/pML6VN7OIEA"
+        },
+        "instagram": {
+          "views": 0,
+          "link": "https://www.instagram.com/reel/DdbgF-HzV3C/"
+        },
+        "facebook": {
+          "views": 0,
+          "link": "https://www.facebook.com/share/r/1Semqta54A/"
+        }
       }
     },
     "e03": {
       "videoId": "peCfxJ1HdnI",
       "platforms": {
-        "youtube": { "views": 0, "link": "https://youtube.com/shorts/peCfxJ1HdnI" },
-        "instagram": { "views": 0, "link": "https://www.instagram.com/reel/DdMGwy6zJSQ/" },
-        "facebook": { "views": 0, "link": "https://www.facebook.com/reel/1087500463666298" }
+        "youtube": {
+          "views": 0,
+          "link": "https://youtube.com/shorts/peCfxJ1HdnI"
+        },
+        "instagram": {
+          "views": 0,
+          "link": "https://www.instagram.com/reel/DdMGwy6zJSQ/"
+        },
+        "facebook": {
+          "views": 0,
+          "link": "https://www.facebook.com/reel/1087500463666298"
+        }
+      }
+    },
+    "e02": {
+      "videoId": "Q6floi3cDLE",
+      "platforms": {
+        "youtube": {
+          "views": 0,
+          "link": "https://youtube.com/shorts/Q6floi3cDLE"
+        },
+        "instagram": {
+          "views": 0,
+          "link": "https://www.instagram.com/reel/DdBvlEizdJD/"
+        },
+        "facebook": {
+          "views": 0,
+          "link": "https://www.facebook.com/reel/1741181130654191"
+        }
+      }
+    },
+    "e01": {
+      "videoId": "43lMkjWerr8",
+      "platforms": {
+        "youtube": {
+          "views": 1247,
+          "link": "https://www.youtube.com/shorts/43lMkjWerr8"
+        },
+        "instagram": {
+          "views": 892,
+          "link": "https://www.instagram.com/reel/Dc6ExxHzsaW/"
+        },
+        "facebook": {
+          "views": 341,
+          "link": "https://www.facebook.com/share/r/1csWNxgk8z/"
+        }
       }
     }
   }

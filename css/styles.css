@@ -58,6 +58,20 @@
             transition: background 0.3s ease, color 0.3s ease;
         }
 
+        /* Keyboard-only focus ring for anything interactive without its own rule.
+           :focus-visible keeps it off mouse/touch clicks. */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible,
+        summary:focus-visible,
+        [tabindex]:focus-visible {
+            outline: 2px solid var(--bahi-red);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -642,6 +656,7 @@
             fill: white;
         }
 
+        .about-feature-text h3,
         .about-feature-text h4 {
             font-size: 1rem;
             font-weight: 600;
@@ -748,6 +763,14 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
             gap: 24px;
+        }
+
+        /* The homepage only shows the two newest episodes, so the grid needs its
+           own route to the rest of the catalogue. */
+        .episodes-more {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
         }
 
         .episode-card {
@@ -927,6 +950,9 @@
             padding: 4px 10px;
             border-radius: 100px;
         }
+
+        /* author `display` beats the UA [hidden] rule, so restate it */
+        .episode-views[hidden] { display: none; }
 
         .episode-views svg {
             opacity: 0.7;
@@ -1461,6 +1487,7 @@
             fill: white;
         }
 
+        .footer-links h3,
         .footer-links h4 {
             font-size: 0.9375rem;
             font-weight: 700;
