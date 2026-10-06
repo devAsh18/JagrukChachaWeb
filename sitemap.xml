@@ -3,27 +3,39 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
         <loc>https://jagrukchacha.com/</loc>
-        <lastmod>2026-10-03</lastmod>
+        <lastmod>2026-10-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <video:video>
-            <video:thumbnail_loc>https://jagrukchacha.com/assets/episodes/E08/E08-Thumbnail-1536.webp</video:thumbnail_loc>
-            <video:title>3075 रुपये में सारे टोल फ्री?</video:title>
-            <video:description>The ₹3,075 FASTag Annual Pass works only on National Highways and National Expressways — State Highways, State Expressways and city roads still charge full toll. Over 1 crore passes sold by September 2026.</video:description>
-            <video:content_loc>https://www.youtube.com/shorts/n25C01HkCSE</video:content_loc>
-            <video:embed_url>https://www.youtube.com/embed/n25C01HkCSE</video:embed_url>
-            <video:duration>58</video:duration>
-            <video:publication_date>2026-10-03</video:publication_date>
+            <video:thumbnail_loc>https://jagrukchacha.com/assets/episodes/E09/E09-Thumbnail-1536.webp</video:thumbnail_loc>
+            <video:title>बीस की बोतल... पांच की लागत!</video:title>
+            <video:description>A ₹20 1-litre bottled water costs less than 50 paise in real water — plastic alone is ~₹3; the plant sells for ₹10–14 and the retailer ₹20.</video:description>
+            <video:content_loc>https://www.youtube.com/shorts/ByMrqrNOdqw</video:content_loc>
+            <video:embed_url>https://www.youtube.com/embed/ByMrqrNOdqw</video:embed_url>
+            <video:duration>45</video:duration>
+            <video:publication_date>2026-10-06</video:publication_date>
             <video:family_friendly>yes</video:family_friendly>
             <video:live>no</video:live>
-            <video:player_loc allow_embed="yes">https://www.youtube.com/embed/n25C01HkCSE</video:player_loc>
+            <video:player_loc allow_embed="yes">https://www.youtube.com/embed/ByMrqrNOdqw</video:player_loc>
         </video:video>
     </url>
     <url>
         <loc>https://jagrukchacha.com/episodes.html</loc>
-        <lastmod>2026-10-03</lastmod>
+        <lastmod>2026-10-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:thumbnail_loc>https://jagrukchacha.com/assets/episodes/E09/E09-Thumbnail-1536.webp</video:thumbnail_loc>
+            <video:title>बीस की बोतल... पांच की लागत!</video:title>
+            <video:description>A ₹20 1-litre bottled water costs less than 50 paise in real water — plastic alone is ~₹3; the plant sells for ₹10–14 and the retailer ₹20.</video:description>
+            <video:content_loc>https://www.youtube.com/shorts/ByMrqrNOdqw</video:content_loc>
+            <video:embed_url>https://www.youtube.com/embed/ByMrqrNOdqw</video:embed_url>
+            <video:duration>45</video:duration>
+            <video:publication_date>2026-10-06</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:live>no</video:live>
+            <video:player_loc allow_embed="yes">https://www.youtube.com/embed/ByMrqrNOdqw</video:player_loc>
+        </video:video>
         <video:video>
             <video:thumbnail_loc>https://jagrukchacha.com/assets/episodes/E08/E08-Thumbnail-1536.webp</video:thumbnail_loc>
             <video:title>3075 रुपये में सारे टोल फ्री?</video:title>
@@ -123,7 +135,7 @@
     </url>
     <url>
         <loc>https://jagrukchacha.com/contact.html</loc>
-        <lastmod>2026-10-03</lastmod>
+        <lastmod>2026-10-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
