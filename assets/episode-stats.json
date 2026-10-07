@@ -1,7 +1,15 @@
 {
   "_comment": "Jagruk Chacha — Episode statistics. Fetched by js/main.js with no client-side cache (the GitHub Pages CDN handles freshness). Update manually or via a GitHub Actions cron job using the YouTube Data API. A views value of 0 means 'not counted yet' and the badge stays hidden.",
-  "lastUpdated": "2026-10-06T00:00:00Z",
+  "lastUpdated": "2026-10-07T00:00:00Z",
   "episodes": {
+    "e11": {
+      "videoId": "yiYvIu3rB-4",
+      "platforms": {
+        "youtube": {"views": 0, "link": "https://youtube.com/shorts/yiYvIu3rB-4"},
+        "instagram": {"views": 0, "link": "https://www.instagram.com/reel/DeMhqNjAWil/"},
+        "facebook": {"views": 0, "link": "https://www.facebook.com/share/r/14sv8fJBtsC/"}
+      }
+    },
     "e10": {
       "videoId": "dEjQHDmsiHU",
       "platforms": {

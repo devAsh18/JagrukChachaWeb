@@ -3,7 +3,7 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
         <loc>https://jagrukchacha.com/</loc>
-        <lastmod>2026-10-06</lastmod>
+        <lastmod>2026-10-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <video:video>
@@ -18,10 +18,22 @@
             <video:live>no</video:live>
             <video:player_loc allow_embed="yes">https://www.youtube.com/embed/dEjQHDmsiHU</video:player_loc>
         </video:video>
+        <video:video>
+            <video:thumbnail_loc>https://img.youtube.com/vi/yiYvIu3rB-4/0.jpg</video:thumbnail_loc>
+            <video:title>5 रुपये का अखबार... और लागत 15 रुपये? कैसे?</video:title>
+            <video:description>A ₹5 newspaper costs ₹15 to produce — paper, ink, printing, distribution and retailer margins all add up.\n₹5 का अखबार बनाने में ₹15 लगते हैं — कागज़, स्याही, छपाई, वितरण और दुकानदार का मार्जिन सब जोड़ता है।</video:description>
+            <video:content_loc>https://www.youtube.com/shorts/yiYvIu3rB-4</video:content_loc>
+            <video:embed_url>https://www.youtube.com/embed/yiYvIu3rB-4</video:embed_url>
+            <video:duration>45</video:duration>
+            <video:publication_date>2026-10-07</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:live>no</video:live>
+            <video:player_loc allow_embed="yes">https://www.youtube.com/embed/yiYvIu3rB-4</video:player_loc>
+        </video:video>
     </url>
     <url>
         <loc>https://jagrukchacha.com/episodes.html</loc>
-        <lastmod>2026-10-06</lastmod>
+        <lastmod>2026-10-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <video:video>
@@ -35,6 +47,18 @@
             <video:family_friendly>yes</video:family_friendly>
             <video:live>no</video:live>
             <video:player_loc allow_embed="yes">https://www.youtube.com/embed/dEjQHDmsiHU</video:player_loc>
+        </video:video>
+        <video:video>
+            <video:thumbnail_loc>https://img.youtube.com/vi/yiYvIu3rB-4/0.jpg</video:thumbnail_loc>
+            <video:title>5 रुपये का अखबार... और लागत 15 रुपये? कैसे?</video:title>
+            <video:description>A ₹5 newspaper costs ₹15 to produce — paper, ink, printing, distribution and retailer margins all add up.\n₹5 का अखबार बनाने में ₹15 लगते हैं — कागज़, स्याही, छपाई, वितरण और दुकानदार का मार्जिन सब जोड़ता है।</video:description>
+            <video:content_loc>https://www.youtube.com/shorts/yiYvIu3rB-4</video:content_loc>
+            <video:embed_url>https://www.youtube.com/embed/yiYvIu3rB-4</video:embed_url>
+            <video:duration>45</video:duration>
+            <video:publication_date>2026-10-07</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:live>no</video:live>
+            <video:player_loc allow_embed="yes">https://www.youtube.com/embed/yiYvIu3rB-4</video:player_loc>
         </video:video>
         <video:video>
             <video:thumbnail_loc>https://jagrukchacha.com/assets/episodes/E09/E09-Thumbnail-1536.webp</video:thumbnail_loc>
@@ -140,7 +164,7 @@
     </url>
     <url>
         <loc>https://jagrukchacha.com/contact.html</loc>
-        <lastmod>2026-10-06</lastmod>
+        <lastmod>2026-10-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
