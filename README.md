@@ -35,27 +35,29 @@ edited in by hand in several places. For a new episode **E0N**:
 4. `sitemap.xml` — homepage `video:video` block, `<lastmod>` for `/` and `/episodes.html`
 5. `js/main.js` — the **hardcoded** `VIDEO_ID` constant (~line 300). It is *not*
    derived from `episode-stats.json`, so it silently drifts — check it every time.
-6. `assets/episodes/E0N/` — thumbnails (see below)
 
 The homepage shows only the **two newest** episodes plus a coming-soon tile;
 older episodes live on `episodes.html`.
 
-### Thumbnails
+### Thumbnails (updated 2026-10-08)
 
-Cards render at `aspect-ratio: 16/9` with `object-fit: cover`, so every
-landscape file must actually be 16:9:
+All episode thumbnails are now **fetched automatically from YouTube** using the pattern:
+`https://img.youtube.com/vi/{VIDEO_ID}/0.jpg`
 
-| file | used for |
-|---|---|
-| `E0N-Thumbnail-640.webp` | `srcset` 640w |
-| `E0N-Thumbnail-1280.webp` | `srcset` 1280w |
-| `E0N-Thumbnail-1536.webp` | `srcset` 1536w (**must be 1536×864**) |
-| `E0N-Thumbnail-16x9.jpeg` | `<img src>` fallback (**must be 1536×864**) |
+The `VIDEO_ID` comes from `assets/episode-stats.json`. No local thumbnail assets are needed —
+this saves ~20 MB in the repo and eliminates the manual thumbnail generation/upload step.
 
-`E0N-Thumbnail.webp` and `E0N-Thumbnail.jpeg` are 9:16 portrait *artwork
-sources* — they are no longer referenced by any page. The
-`*_2K_*.jpeg` / `*-Landscape_2K_*` files are the generation originals and are
-also unreferenced; keep them in the pipeline repo rather than shipping them.
+When adding a new episode card to `index.html` or `episodes.html`, use the YouTube URL:
+```html
+<img src="https://img.youtube.com/vi/{videoId}/0.jpg" ...>
+<source srcset="https://img.youtube.com/vi/{videoId}/0.jpg 1536w" type="image/jpeg">
+```
+
+The same YouTube URL pattern is used for:
+- `index.html` hero card image and preload
+- `index.html` and `episodes.html` episode cards
+- `episodes.html` JSON-LD `thumbnailUrl`
+- `sitemap.xml` `video:thumbnail_loc`
 
 Episode content (title, script, cost breakdown, numbers) comes from
 `JagrukChachaPipeline/04_CONTENT/scripts/approved/`.
