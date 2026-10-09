@@ -3,9 +3,21 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
         <loc>https://jagrukchacha.com/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <video:video>
+            <video:thumbnail_loc>https://img.youtube.com/vi/524Cgswi8LQ/0.jpg</video:thumbnail_loc>
+            <video:title>पाँच सौ की प्लेट... खाना सिर्फ़ सौ पचास!</video:title>
+            <video:description>A ₹500 wedding plate contains only ~₹150 of real food — dal, rice, sabzi, ghee; the rest goes to labor, gas, utensils, transport, and the caterer's profit.\nपाँच सौ की शादी की प्लेट में असली खाना यानि दाल, चावल, सबज़ी, घी — लगभग सौ पचास रुपये का ही होता है; बाक़ी पैसा मज़दूरी, गैस-बरतन, ढुलाई और कैटरर के मुनाफे में जाता है।</video:description>
+            <video:content_loc>https://www.youtube.com/shorts/524Cgswi8LQ</video:content_loc>
+            <video:embed_url>https://www.youtube.com/embed/524Cgswi8LQ</video:embed_url>
+            <video:duration>45</video:duration>
+            <video:publication_date>2026-10-09</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:live>no</video:live>
+            <video:player_loc allow_embed="yes">https://www.youtube.com/embed/524Cgswi8LQ</video:player_loc>
+        </video:video>
         <video:video>
             <video:thumbnail_loc>https://img.youtube.com/vi/kl-VvS4t9ho/0.jpg</video:thumbnail_loc>
             <video:title>200 रुपये की बाल कटाई में नाई को 50 रुपये ही बचते है?</video:title>
@@ -14,9 +26,9 @@
             <video:embed_url>https://www.youtube.com/embed/kl-VvS4t9ho</video:embed_url>
             <video:duration>45</video:duration>
             <video:publication_date>2026-10-08</video:publication_date>
-            <video:family_friendly>yes</video:family_friendly>>
+            <video:family_friendly>yes</video:family_friendly>
             <video:live>no</video:live>
-            <video:player_loc allow_embed="yes">https://www.youtube.com/embed/dEjQHDmsiHU</video:player_loc>
+            <video:player_loc allow_embed="yes">https://www.youtube.com/embed/kl-VvS4t9ho</video:player_loc>
         </video:video>
         <video:video>
             <video:thumbnail_loc>https://img.youtube.com/vi/yiYvIu3rB-4/0.jpg</video:thumbnail_loc>
@@ -33,9 +45,21 @@
     </url>
     <url>
         <loc>https://jagrukchacha.com/episodes.html</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:thumbnail_loc>https://img.youtube.com/vi/524Cgswi8LQ/0.jpg</video:thumbnail_loc>
+            <video:title>पाँच सौ की प्लेट... खाना सिर्फ़ सौ पचास!</video:title>
+            <video:description>A ₹500 wedding plate contains only ~₹150 of real food — dal, rice, sabzi, ghee; the rest goes to labor, gas, utensils, transport, and the caterer's profit.\nपाँच सौ की शादी की प्लेट में असली खाना यानि दाल, चावल, सबज़ी, घी — लगभग सौ पचास रुपये का ही होता है; बाक़ी पैसा मज़दूरी, गैस-बरतन, ढुलाई और कैटरर के मुनाफे में जाता है।</video:description>
+            <video:content_loc>https://www.youtube.com/shorts/524Cgswi8LQ</video:content_loc>
+            <video:embed_url>https://www.youtube.com/embed/524Cgswi8LQ</video:embed_url>
+            <video:duration>45</video:duration>
+            <video:publication_date>2026-10-09</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:live>no</video:live>
+            <video:player_loc allow_embed="yes">https://www.youtube.com/embed/524Cgswi8LQ</video:player_loc>
+        </video:video>
         <video:video>
             <video:thumbnail_loc>https://img.youtube.com/vi/kl-VvS4t9ho/0.jpg</video:thumbnail_loc>
             <video:title>200 रुपये की बाल कटाई में नाई को 50 रुपये ही बचते है?</video:title>
