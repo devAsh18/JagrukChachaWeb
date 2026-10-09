@@ -3,18 +3,18 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
         <loc>https://jagrukchacha.com/</loc>
-        <lastmod>2026-10-07</lastmod>
+        <lastmod>2026-10-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <video:video>
-            <video:thumbnail_loc>https://img.youtube.com/vi/dEjQHDmsiHU/0.jpg</video:thumbnail_loc>
-            <video:title>सौ रुपये निकालने को... तेईस रुपये?</video:title>
-            <video:description>₹100 withdrawal costs ₹23 — it's not an ATM fee, it's the cost of keeping money sitting idle in machines. Roughly ₹21 lakh crore sits idle across India's ATMs.</video:description>
-            <video:content_loc>https://www.youtube.com/shorts/dEjQHDmsiHU</video:content_loc>
-            <video:embed_url>https://www.youtube.com/embed/dEjQHDmsiHU</video:embed_url>
+            <video:thumbnail_loc>https://img.youtube.com/vi/kl-VvS4t9ho/0.jpg</video:thumbnail_loc>
+            <video:title>200 रुपये की बाल कटाई में नाई को 50 रुपये ही बचते है?</video:title>
+            <video:description>A ₹200 haircut puts only ~₹50 in the barber's pocket — with a ~₹12,000/month wage spread over ~260 cuts, each cut yields ~₹48, and the rest goes to rent, electricity, and shop costs.\nदो सौ रुपये की बाल कटाई में सिर्फ़ पचास रुपये नाई की जेब में बचते हैं — बारह हज़ार रुपये महीने की तनख़वाह लगभग 260 कटाई में हर कटाई पर लगभग अड़तालीस रुपये बचते हैं, और बाकी किराया‑बिजली‑दुकान के खर्च में जाते हैं।</video:description>
+            <video:content_loc>https://www.youtube.com/shorts/kl-VvS4t9ho</video:content_loc>
+            <video:embed_url>https://www.youtube.com/embed/kl-VvS4t9ho</video:embed_url>
             <video:duration>45</video:duration>
-            <video:publication_date>2026-10-06</video:publication_date>
-            <video:family_friendly>yes</video:family_friendly>
+            <video:publication_date>2026-10-08</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>>
             <video:live>no</video:live>
             <video:player_loc allow_embed="yes">https://www.youtube.com/embed/dEjQHDmsiHU</video:player_loc>
         </video:video>
@@ -33,9 +33,21 @@
     </url>
     <url>
         <loc>https://jagrukchacha.com/episodes.html</loc>
-        <lastmod>2026-10-07</lastmod>
+        <lastmod>2026-10-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:thumbnail_loc>https://img.youtube.com/vi/kl-VvS4t9ho/0.jpg</video:thumbnail_loc>
+            <video:title>200 रुपये की बाल कटाई में नाई को 50 रुपये ही बचते है?</video:title>
+            <video:description>A ₹200 haircut puts only ~₹50 in the barber's pocket — with a ~₹12,000/month wage spread over ~260 cuts, each cut yields ~₹48, and the rest goes to rent, electricity, and shop costs.\nदो सौ रुपये की बाल कटाई में सिर्फ़ पचास रुपये नाई की जेब में बचते हैं — बारह हज़ार रुपये महीने की तनख़वाह लगभग 260 कटाई में हर कटाई पर लगभग अड़तालीस रुपये बचते हैं, और बाकी किराया‑बिजली‑दुकान के खर्च में जाते हैं।</video:description>
+            <video:content_loc>https://www.youtube.com/shorts/kl-VvS4t9ho</video:content_loc>
+            <video:embed_url>https://www.youtube.com/embed/kl-VvS4t9ho</video:embed_url>
+            <video:duration>45</video:duration>
+            <video:publication_date>2026-10-08</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:live>no</video:live>
+            <video:player_loc allow_embed="yes">https://www.youtube.com/embed/kl-VvS4t9ho</video:player_loc>
+        </video:video>
         <video:video>
             <video:thumbnail_loc>https://img.youtube.com/vi/dEjQHDmsiHU/0.jpg</video:thumbnail_loc>
             <video:title>सौ रुपये निकालने को... तेईस रुपये?</video:title>
@@ -71,11 +83,6 @@
             <video:family_friendly>yes</video:family_friendly>
             <video:live>no</video:live>
             <video:player_loc allow_embed="yes">https://www.youtube.com/embed/ByMrqrNOdqw</video:player_loc>
-        </video:video>
-            <video:publication_date>2026-10-03</video:publication_date>
-            <video:family_friendly>yes</video:family_friendly>
-            <video:live>no</video:live>
-            <video:player_loc allow_embed="yes">https://www.youtube.com/embed/n25C01HkCSE</video:player_loc>
         </video:video>
         <video:video>
             <video:thumbnail_loc>https://img.youtube.com/vi/I7VTxhPZe6E/0.jpg</video:thumbnail_loc>
